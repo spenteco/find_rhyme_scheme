@@ -22,9 +22,12 @@ all_lg.9.json contains 3,653 stanzas.  The process correctly identifies 2,872 (7
 
 These numbers are interesting (there are 32,877 lines of verse in the data):
 
-*  We resolved 17,895 lines using sight rhyme and original spellings; only 68 were incorrectly resolved.  Note that when computing the percentage of lines resolved by sight, your demoninator should be 29,224 (3,653 * 8; first lines don't figure here); 60% of rhymes in FQ are resolvable by sight alone.
+*  We resolved 17,895 lines using sight rhyme and original spellings; only 68 were incorrectly resolved.  Note that when computing the percentage of lines resolved by sight, your demoninator should be 21,918 (3,653 * 6; first, second, and sixth lines don't figure here); 81% of rhymes in FQ are resolvable by sight alone.  Really?
+
 *  10,897 times, the line did not rhyme with any preceeding line (sometimes because it's the first line); 325 of these findings were wrong.  Some of these are my bugs.  Some are Spenser's.
+
 *  We matched on exact phonemes only 2,648 times.  A shockingly small number.
+
 *  phonk was used 1,437 times.  350 were incorrect.  However, please note that those 350 are the cost of fixing 1,087 other problems, so for now, they're worth it.
 
 

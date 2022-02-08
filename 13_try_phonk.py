@@ -43,9 +43,8 @@ def is_a_d_t_match(rhyme_phones_a, rhyme_phones_b):
 
 def find_rhymes(all_lg, 
                 ALL_A_RHYME=False,
-                RULES_TO_TRY=['exact_phones', 'sight_rhyme', 'phonk']):
-
-    EXPECTED_RHYME = 'ababbcbcc'
+                RULES_TO_TRY=['exact_phones', 'sight_rhyme', 'phonk'],
+                EXPECTED_RHYME='ababbcbcc'):
 
     for lg_n, lg in enumerate(all_lg):
         
@@ -214,7 +213,7 @@ def find_rhymes(all_lg,
         # --------------------------------------------------------------
         
         print()
-        print(error, lg_n, rhyme_results_letters, terminal_words, lg['rhyme_sounds'])
+        print(error, lg['tcp_id'], lg_n, rhyme_results_letters, terminal_words, lg['rhyme_sounds'])
         print()
         
         #if error == 'ERROR':
@@ -325,11 +324,15 @@ def find_rhymes(all_lg,
 if __name__ == "__main__":
 
     LG_LENGTH = 9
+    EXPECTED_RHYME = 'ababbcbcc'
+    
+    #LG_LENGTH = 14
+    #EXPECTED_RHYME = 'abcdefghijklmn'
+    
+    #LG_LENGTH = 7
+    #EXPECTED_RHYME = 'ababbcc'
 
     all_lg = json.load(open('all_lg.' + str(LG_LENGTH) + '.json', 'r', encoding='utf-8'))
-    find_rhymes(all_lg, RULES_TO_TRY=['sight_rhyme', 'exact_phones', 'phonk'])
+    find_rhymes(all_lg, RULES_TO_TRY=['sight_rhyme', 'exact_phones', 'phonk'], EXPECTED_RHYME=EXPECTED_RHYME)
     #find_rhymes(all_lg, RULES_TO_TRY=['sight_rhyme', 'exact_phones'])
     #find_rhymes(all_lg)
-
-    #all_lg = json.load(open('grep_sed_test_data.json', 'r', encoding='utf-8'))
-    #find_rhymes(all_lg, ALL_A_RHYME=True)

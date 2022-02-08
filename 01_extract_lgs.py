@@ -7,7 +7,7 @@ from syllabify import syllabify
 LG_LENGTH = 9
 
 #FQ_TCP_IDS = ['A12777', 'A12778']
-FQ_TCP_IDS = ['A12778']
+#FQ_TCP_IDS = ['A12778']
 
 all_lg = []
 
@@ -18,8 +18,8 @@ for f_n, f in enumerate(glob.glob('/home/spenteco/0/all_lines_phonemes/*.txt')):
     
     tcp_id = f.split('/')[-1].split('.')[0]
 
-    if tcp_id not in FQ_TCP_IDS:
-        continue
+    #if tcp_id not in FQ_TCP_IDS:
+    #    continue
     
     text = open(f, 'r', encoding='utf-8').read().replace('<br/>	<br/>	<br/>	<br/>', '')
     

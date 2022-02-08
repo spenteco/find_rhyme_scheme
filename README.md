@@ -1,3 +1,21 @@
+
+# Notes from 2/8/22
+
+The FQ data and results are now called FQ.9.json and OUT.FQ.9.txt.  Except for the OUT.txt -> OUT.FQ.9.txt, the grepping below should still work.
+
+**New data files**: all_lg.14.json, all_lg.7.json, and all_lg.9.json, which contain 14, 7, and 9 line stanzas from the poetry corpus.
+
+**New outputs**:  OUT.9.txt (looking for FQ stanzas), OUT.7.txt (looking for rhyme royal), OUT.14.txt (looking for sonnets).  In looking for sonnets, I look for a rhyme scheme like "abcdefghijklmn" (i.e., blank verse); actual sonnets will be reported as errors in the output.
+
+**New notebooks**:
+
+7.examine_results.ipynb  Reads OUT.7.txt.  Reports, "which texts have rhyme rhyme ('OK') and/or 7 line poems which are not rhyme royal ('ERROR')?  See file counts.7.csv.
+
+9.examine_results.ipynb  Reads OUT.9.txt.  Reports, "which texts have FQ stanzas ('OK') and/or 9 line poems which are not rhyme royal ('ERROR')?  See file counts.9.csv.
+
+14.examine_results.ipynb  Reads OUT.14.txt.  Reports the counts of tcp id and rhyme schemes (file tcp_id_rhyme_scheme.14.csv) and counts of rhyme_schemes (rhyme_scheme_counts.14.csv).
+
+
 # Notes from 1/3/22 #
 
 If you've come from the memo of 1/3/22, then:
